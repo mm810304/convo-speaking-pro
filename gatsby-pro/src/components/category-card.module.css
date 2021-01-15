@@ -1,0 +1,56 @@
+.card {
+  background-color: var(--light-gray);
+  box-shadow: var(--bs-level2);
+  transition: transform .3s linear;
+}
+
+.title {
+  color: var(--base-color);
+  font-size: var(--title-small);
+  padding: var(--padding-small);
+  margin-bottom: var(--margin-large);
+}
+
+.numberOfLessons {
+  font-size: var(--text-xs);
+  font-weight: var(--bold-font);
+  color: var(--base-color);
+  margin-top: var(--margin-large);
+  margin-left: var(--margin-small);
+  margin-bottom: var(--margin-medium);
+}
+
+.border {
+  border: .35rem solid var(--base-color); 
+  padding: var(--padding-small);
+  background-color: var(--light-gray);
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--bs-level3);
+}
+
+.card:hover .title {
+  color: var(--comp-color);
+}
+
+.card:hover .numberOfLessons {
+  color: var(--comp-color);
+}
+.card:hover .border {
+  border: .35rem solid var(--comp-color); 
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: var(--title-small);
+    padding: var(--padding-small);
+    margin-bottom: var(--margin-medium);
+  }
+
+  .border {
+    border: .35rem solid var(--base-color); 
+    padding: .5rem;
+  }
+}

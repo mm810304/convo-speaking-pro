@@ -1,0 +1,8 @@
+.container {
+  width: 80%;
+  font-size: var(--text-xl);
+  color: var(--black);
+  line-height: 1.4;
+  margin-top: var(--margin-large);
+  margin-left: var(--margin-large);
+}

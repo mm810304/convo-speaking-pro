@@ -1,0 +1,28 @@
+.wrapper {
+  width: 75%;
+  max-width: 1200px;
+  margin: 1rem auto;
+}
+
+.lessonsContainer h2 {
+  font-size: var(--title-small);
+  color: var(--base-color);
+  text-align: center;
+}
+
+.lessonsContainer ol {
+  margin-left: var(--margin-medium);
+  list-style-type: none;
+  width: auto;
+}
+
+.listItem, .listItem a {
+  margin-bottom: var(--margin-small);
+  font-size: var(--subtitle-large);
+  width: fit-content;
+  color: var(--black);
+}
+
+.listItem a:hover {
+  color: var(--base-color);
+}

@@ -1,0 +1,99 @@
+.cardContainer {
+  border-bottom: 2px solid lightgray;
+  padding-bottom: var(--padding-medium);
+}
+
+.card {
+  display: grid;
+  grid-template-areas: "image text";
+  grid-template-columns: 200px 1fr;
+  align-items: top;
+}
+
+.image {
+  width: 200px;
+  grid-area: image;
+  align-self: center;
+}
+
+.lessonInfo {
+  grid-area: text;
+  margin: 0 var(--margin-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lessonTitle {
+  font-size: var(--title-medium);
+  color: var(--dark-gray);
+}
+
+.lessonNumber {
+  font-size: var(--subtitle-xs);
+  color: var(--base-color);
+  font-weight: 400;
+}
+.numberBorder {
+  border: 2px solid var(--base-color);
+  padding: .5rem;
+}
+
+.cardContainer:hover .lessonTitle {
+  color: var(--base-color);
+}
+
+.cardContainer:hover .numberBorder {
+  border: none;
+  color: var(--base-color);
+  font-weight: bold;
+}
+
+.cardContainer:hover .image {
+  filter: brightness(0.90);
+}
+
+@media (max-width: 900px) {
+  .lessonInfo {
+    margin: 0 1rem;
+  }
+
+  .lessonTitle {
+    font-size: 2.2rem;
+    margin: 0 0 2rem 0;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .card {
+    display: grid;
+    grid-template-areas: "image text";
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .image {
+    width: 150px;
+    grid-area: image;
+    align-self: center;
+  }
+
+  .cardWrapper {
+    margin: 0;
+  }
+
+  .lessonTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .lessonNumber {
+    font-size: 1.2rem;
+  }
+
+  .numberBorder {
+    padding: .25rem;
+  }
+}

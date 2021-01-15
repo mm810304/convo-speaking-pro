@@ -1,0 +1,40 @@
+.footer {
+  height: 9rem;
+  width: 100%;
+  background: var(--dark-gray);
+  color: var(--off-white);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.mainText {
+  margin: .5rem 3rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: var(--text-small);
+}
+
+.link {
+  color: var(--base-color);
+  font-size: var(--text-small);
+}
+
+.link:hover {
+  color: var(--off-white);
+}
+
+@media (max-width: 500px) {
+  .footer {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    justify-content: center;
+    height: 12rem;
+  }
+
+  .contact {
+    margin-bottom: .5rem;
+  }
+}

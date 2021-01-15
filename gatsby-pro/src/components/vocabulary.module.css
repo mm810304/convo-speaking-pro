@@ -1,0 +1,58 @@
+.vocabBox {
+  margin: 2rem 0 2rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  background: var(--off-white);
+}
+
+.headerBoxShadow {
+  box-shadow: var(--bs-level1);
+}
+
+.header h2 {
+  font-size: 1.8rem;
+}
+
+.button {
+  background: transparent;
+  border: 2px solid var(--base-color);
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--base-color);
+  cursor: pointer;
+  align-self: center;
+  outline: none;
+}
+
+.button svg {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.vocabContent {
+  width: 100%;
+  padding: 1rem;
+}
+
+.vocabContent p {
+  font-size: var(--text-large);
+  margin-bottom: var(--margin-medium);
+}
+
+.vocabContent li {
+  font-size: var(--text-large);
+  margin-bottom: var(--margin-medium);
+  margin-left: var(--margin-medium);
+}
+
+/*Detailed Styles for html vocabulary in Global Styles*/
