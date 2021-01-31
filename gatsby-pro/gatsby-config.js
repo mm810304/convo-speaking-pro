@@ -4,9 +4,17 @@ dotenv.config({ path: '.env' });
 module.exports = {
   siteMetadata: {
     title: `Convo Speaking Pro`,
-    description: `Practice speaking English using advanced English expressions, idioms, slang, and grammar.`
+    description: `Practice speaking English with conversations using advanced English grammar, expressions, idioms, and phrases.  This is the best way to improve your English speaking fluency while practicing on your own.`
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'xxxx',
+        includeInDevelopment: false
+      },
+    },
     {
       resolve: 'gatsby-source-sanity',
       options: {
@@ -16,5 +24,15 @@ module.exports = {
         token: process.env.SANITY_TOKEN
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          `Spectral\:400,700`,
+          `Open Sans\:400,700`
+        ],
+        display: `swap`
+      }
+    }
   ],
 }

@@ -3,13 +3,24 @@ import { graphql } from 'gatsby';
 
 import Categories from '../components/Categories';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import styles from './home.module.css';
 
 const HomePage = ({ data }) => {
-  const categories = data.categories.nodes;
-  console.log(categories);
+  const categories = data.categories.nodes.sort((a, b) => {
+    return a.number > b.number ? 1 : -1;
+  });
+
+  const SEOImage = categories[0].image.asset.fluid;
+
   return (
     <React.Fragment>
+      <SEO 
+        title="Convo Speaking Pro"
+        description="Practice speaking English with conversations using advanced English grammar, expressions, idioms, and phrases.  This is the best way to improve your English speaking fluency while practicing on your own."
+        location="https://www.convospeakingpro.com"
+        image={SEOImage.src}
+      />
       <Layout>
         <div className={styles.headerContainer}>
           <h1 className={styles.title}>Convo Speaking Pro</h1>

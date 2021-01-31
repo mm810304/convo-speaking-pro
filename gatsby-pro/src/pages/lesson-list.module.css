@@ -1,7 +1,7 @@
 .wrapper {
   width: 75%;
   max-width: 1200px;
-  margin: 1rem auto;
+  margin: 2rem auto;
 }
 
 .lessonsContainer h2 {
@@ -10,10 +10,16 @@
   text-align: center;
 }
 
-.lessonsContainer ol {
-  margin-left: var(--margin-medium);
+.categoryList {
   list-style-type: none;
   width: auto;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  column-gap: 2rem;
+  align-self: center;
+  justify-content: center;
+  transform: translateX(10%);
+  margin: 2rem 0;
 }
 
 .listItem, .listItem a {
@@ -25,4 +31,28 @@
 
 .listItem a:hover {
   color: var(--base-color);
+}
+
+@media (max-width: 950px) {
+  .wrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    width: 75%;
+  }
+  .categoryList {
+    margin-left: var(--margin-medium);
+    list-style-type: none;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+    align-self: center;
+    justify-content: center;
+    transform: translateX(0);
+    margin: 2rem 0;
+  }
 }

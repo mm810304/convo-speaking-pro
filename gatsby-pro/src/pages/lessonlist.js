@@ -2,15 +2,23 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 import styles from './lesson-list.module.css';
 
 const LessonListPage = ({ data }) => {
   const categories = data.categories.nodes;
-  const lessons = data.lessons.nodes;
-  console.log(data);
+  const lessons = data.lessons.nodes.sort((a, b) => {
+    return a.title > b.title ? 1 : -1;
+  });
+
   return (
     <React.Fragment>
+      <SEO 
+        title="All Convo Speaking Pro Lessons"
+        description="A list of all the conversation lessons on Convo Speaking Pro"
+        location="https://www.convospeakingpro.com/lessonlist"
+      />
       <Layout>
         <div className={styles.wrapper}>
           {categories.map((category, index) => {
@@ -27,7 +35,7 @@ const LessonListPage = ({ data }) => {
                           </Link>
                         </li>
                       )
-                    }
+                    } else { return null }
                   })}
                 </ol>
               </div>

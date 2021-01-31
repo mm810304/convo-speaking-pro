@@ -7,6 +7,7 @@ import AudioPlayer from '../components/AudioPlayer';
 import Dialogue from '../components/Dialogue';
 import Directions from '../components/Directions';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import Vocabulary from '../components/Vocabulary';
 import styles from './lesson.module.css';
 
@@ -17,6 +18,8 @@ const LessonPage = ({ data: { lesson }, pageContext }) => {
   const fullAudio = lesson.full_audio.asset.url;
   const speakCharOneAudio = lesson.speak_part_one_audio.asset.url;
   const speakCharTwoAudio = lesson.speak_part_two_audio.asset.url;
+
+  const SEOImage = lesson.lesson_image.asset.fluid;
 
   const [currentAudio, setCurrentAudio] = useState(fullAudio);
   const [autoPlayState, setAutoPlayState] = useState(false);
@@ -38,12 +41,19 @@ const LessonPage = ({ data: { lesson }, pageContext }) => {
 
   const fullAudioSelectHandler = () => {
     setCurrentAudio(fullAudio);
-    setAutoPlayState(true);
+    setAutoPlayState(false);
     setActiveAudio('full');
   };
 
+  console.log(pageContext)
   return (
     <React.Fragment>
+      <SEO 
+        title={title}
+        description={`Practice speaking English on your own with a natural English conversation.  This conversation focuses on the English vocabulary '${title}'.`}
+        image={SEOImage.src}
+        location={`https://www.convospeakingpro/${pageContext.categorySlug}/${pageContext.lessonSlug}`}
+      />
       <Layout>
         <main className={styles.wrapper}>
           <div className={styles.lessonHeader}>
@@ -95,7 +105,7 @@ const LessonPage = ({ data: { lesson }, pageContext }) => {
                 type="button"
                 onClick={fullAudioSelectHandler}
                 className={cx(
-                  styles.fullAudioText,
+                  styles.fullAudioTextBtn,
                   {
                     [styles.fullAudioActive]: activeAudio === 'full'
                   }  
@@ -130,6 +140,13 @@ export const query = graphql`
       vocabulary
       character_one_name
       character_two_name
+      lesson_image {
+        asset {
+          fluid(maxWidth: 1200) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
       character_one_image {
         asset {
           fluid(maxWidth: 400) {

@@ -12,7 +12,7 @@ export default {
     {
       name: 'lesson_number',
       title: 'Lesson Number',
-      description: 'This is only in relation to this specific category.',
+      description: 'This is for all lessons. Used to match with audio numbers.',
       type: 'number',
       validation: Rule => Rule.required()
     },

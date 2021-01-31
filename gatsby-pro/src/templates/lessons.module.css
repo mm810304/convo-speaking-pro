@@ -58,6 +58,12 @@
   }
 
   .title {
-    font-size: var(--medium-title-size);
+    font-size: var(--title-medium);
   }
+
+  .cardWrapper {
+    margin: 2rem .5rem;
+    gap: 2rem;
+  }
+  
 }

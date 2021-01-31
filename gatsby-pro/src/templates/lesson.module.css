@@ -9,7 +9,7 @@
 }
 
 .title {
-  font-size: var(--title-medium);
+  font-size: var(--title-large);
   color: var(--base-color);
   margin: var(--margin-small) 0;
 }
@@ -52,30 +52,32 @@
   transform: translate(-50%, -50%);
   color: var(--base-color);
   font-size: var(--subtitle-medium);
+  font-family: var(--content-font);
   background: var(--off-white);
   opacity: .85;
-  width: 45%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .wholeConvoButton {
   margin: var(--margin-medium) 0;
 }
 
-.fullAudioText {
+.fullAudioTextBtn {
   display: block;
   background: transparent;
   outline: none;
   cursor: pointer;
-  width: 50%;
+  width: auto;
   margin: 0 auto;
-  font-size: var(--subtitle-small);
+  font-size: var(--subtitle-medium);
   color: var(--base-color);
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
   border: 2px solid var(--base-color);
   border-radius: var(--border-radius);
@@ -85,3 +87,55 @@
   background: var(--base-color);
   color: var(--off-white);
 }
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  .nameCentered {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .fullAudioTextBtn {
+    width: 90%;
+    font-size: var(--subtitle-xs);
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: var(--title-medium);
+  }
+
+  .charWrapper {
+    gap: .5rem;
+  }
+  
+  .imgWrapper {
+    padding: var(--padding-xs);
+  }
+  
+  .charImg {
+    padding: 0;
+  }
+
+  .nameCentered {
+    font-size: var(--subtitle-small);
+    width: 80%;
+  }
+}
+
+
+

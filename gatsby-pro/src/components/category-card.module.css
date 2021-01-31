@@ -21,8 +21,8 @@
 }
 
 .border {
-  border: .35rem solid var(--base-color); 
-  padding: var(--padding-small);
+  border: .2rem solid var(--base-color); 
+  padding: .75rem;
   background-color: var(--light-gray);
 }
 
@@ -51,6 +51,13 @@
 
   .border {
     border: .35rem solid var(--base-color); 
+    padding: .5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .border {
+    border: .25rem solid var(--base-color); 
     padding: .5rem;
   }
 }

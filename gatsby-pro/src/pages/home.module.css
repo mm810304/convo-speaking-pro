@@ -18,7 +18,9 @@
   line-height: var(--line-height-medium);
 }
 
-@media (max-width: 550px) {
+
+
+@media (max-width: 750px) {
   .headerContainer {
     width: 90%;
   }

@@ -5,4 +5,30 @@
   line-height: 1.4;
   margin-top: var(--margin-large);
   margin-left: var(--margin-large);
+  font-family: var(--content-font);
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin-left: var(--margin-medium);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-left: var(--margin-small);
+    font-size: var(--text-large);
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin-left: var(--margin-xs);
+  }
 }

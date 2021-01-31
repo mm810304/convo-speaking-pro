@@ -1,5 +1,6 @@
 .directions {
   margin: var(--margin-medium) 0;
+  line-height: var(--line-height-medium);
 }
 
 .header {
@@ -61,7 +62,7 @@
 
 .recommended {
   padding: .5rem 1rem;
-  font-size: var(--subtitle-small);
+  font-size: var(--subtitle-medium);
   font-weight: var(--bold-font);
   margin: 0;
 }
