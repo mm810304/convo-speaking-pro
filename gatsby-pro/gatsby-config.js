@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: 'xxxx',
+        id: process.env.GOOGLE_TAG_MANAGER_CONTAINER,
         includeInDevelopment: false
       },
     },

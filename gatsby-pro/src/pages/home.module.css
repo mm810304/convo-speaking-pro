@@ -18,10 +18,47 @@
   line-height: var(--line-height-medium);
 }
 
+.speakingRef a {
+  font-size: var(--subtitle-large);
+  font-weight: 700;
+  color: var(--base-color);
+  cursor: pointer;
+}
 
+.speakingRef a:hover {
+  color: var(--comp-color);
+}
+
+.extraResources {
+  width: 65%;
+  font-size: var(--subtitle-large);
+  text-align: center;
+  margin: 2rem auto;
+  line-height: var(--line-height-medium);
+}
+
+.proLink {
+  color: var(--base-color);
+  font-weight: 700;
+}
+
+.proLink:hover {
+  color: var(--comp-color);
+}
+
+
+@media (max-width: 1000px) {
+  .extraResources {
+    width: 80%;
+  }
+}
 
 @media (max-width: 750px) {
   .headerContainer {
+    width: 90%;
+  }
+
+  .extraResources {
     width: 90%;
   }
 }
@@ -33,5 +70,8 @@
   .description {
     font-size: var(--subtitle-medium);
     margin-bottom: 0;
+  }
+  .speakingRef a {
+    font-size: var(--subtitle-medium);
   }
 }

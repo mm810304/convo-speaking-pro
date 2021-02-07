@@ -29,6 +29,7 @@ const HomePage = ({ data }) => {
         <div>
           <Categories categories={categories} />
         </div>
+        <p className={styles.extraResources}>If you want easier conversations that focus on the most common English questions, <a href="https://www.convospeaking.com" target="_blank" rel="noreferrer" className={styles.proLink}>Convo Speaking</a> has 100 free basic English conversation lessons.</p>
       </Layout>
     </React.Fragment>
   );
