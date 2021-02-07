@@ -26,14 +26,12 @@ const LessonPage = ({ data: { lesson }, pageContext }) => {
   const [activeAudio, setActiveAudio] = useState('full');
 
   const charOneSelectHandler = () => {
-    console.log('Character one clicked');
     setCurrentAudio(speakCharOneAudio);
     setActiveAudio('charOne');
     setAutoPlayState(false);
   };
 
   const charTwoSelectHandler = () => {
-    console.log('Character 2 clicked');
     setCurrentAudio(speakCharTwoAudio);
     setActiveAudio('charTwo');
     setAutoPlayState(false);
@@ -45,7 +43,6 @@ const LessonPage = ({ data: { lesson }, pageContext }) => {
     setActiveAudio('full');
   };
 
-  console.log(pageContext)
   return (
     <React.Fragment>
       <SEO 
